@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+.header-container {
+  height: 75px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  border-bottom: 2px white ridge;
+  border-bottom-right-radius: 75px;
+  border-bottom-left-radius: 75px;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.header-pic {
+  height: 600px;
+  width: 100vw;
+  background-color: pink;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  background-image: url('../../Assets/grass.jpg');
+  background-size: cover;
+  background-position: top;
+  opacity: 0.85;
+  font-family: 'Tangerine', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-attachment: fixed;
+  animation: bright 1s forwards;
+  opacity: 0.5;
+}
+
+.title-font {
+  font-size: 150px;
+  position: absolute;
+  bottom: 150px;
+  animation: fade-in 2s forwards;
+  opacity: 0;
+}
+
+.available-font {
+  position: absolute;
+  bottom: 115px;
+  font-size: 75px;
+  color: white;
+  animation: fade-in 2s 1s forwards;
+  opacity: 0;
+}
+
+.itunes {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  bottom: 25px;
+  left: 600px;
+  transition: all 0.5s;
+  transform: scale(0);
+  animation: grow 0.5s 2s forwards;
+}
+
+.itunes:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.spotify {
+  height: 135px;
+  width: 135px;
+  position: absolute;
+  bottom: 25px;
+  left: 900px;
+  transition: all 0.5s;
+  transform: scale(0);
+  animation: grow 0.5s 2.5s forwards;
+}
+
+.spotify:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.amazon {
+  height: 135px;
+  width: 135px;
+  position: absolute;
+  bottom: 25px;
+  left: 1200px;
+  transition: all 0.5s;
+  transform: scale(0);
+  animation: grow 0.5s 3s forwards;
+}
+
+.amazon:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@keyframes fade-in {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@keyframes grow {
+  0% {transform: scale(0)}
+  100% {transform: scale(1)}
+}
+
+@keyframes bright {
+  0% {opacity: 0.5}
+  100% {opacity: 1}
+}

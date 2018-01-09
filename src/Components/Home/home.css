@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+
+.home-container {
+  width: 100vw;
+  height: 1000px;
+  border-top: 2px ridge white;
+  background-color: black;
+  position: absolute;
+  top: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.album-div {
+  width: 600px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-pic {
+  border-radius: 25px;
+}
+
+.song-div {
+  width: 500px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column;
+  color: white;
+  font-family: 'Quattrocento', serif;
+  margin-left: 25px;
+}
+
+.song-line {
+  transition: all 0.5s;
+}
+
+.song-line:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 0.5s;
+  color: pink;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
