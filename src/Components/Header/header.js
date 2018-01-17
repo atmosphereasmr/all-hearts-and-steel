@@ -12,6 +12,7 @@ export default class Header extends Component {
       <div className="header-pic">
       <h1 className="title-font">All Hearts And Steel</h1>
       <h1 className="available-font">Available on</h1>
+      <div className="icon-container">
             <a href="https://itunes.apple.com/us/album/all-hearts-and-steel-ep/1318723897">
       <img src={require('../../Assets/itunes.png')} className="itunes"/>
       </a>
@@ -21,6 +22,7 @@ export default class Header extends Component {
       <a href="http://amzn.to/2C20iS6">
       <img src={require('../../Assets/amazon.png')} className="amazon"/>
       </a>
+      </div>
       </div>
       </div>
     )

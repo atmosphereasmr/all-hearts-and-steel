@@ -47,20 +47,26 @@
   position: absolute;
   bottom: 115px;
   font-size: 75px;
-  color: white;
+  color: black;
   animation: fade-in 2s 1s forwards;
   opacity: 0;
+}
+
+.icon-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .itunes {
   height: 150px;
   width: 150px;
-  position: absolute;
-  bottom: 25px;
   left: 600px;
   transition: all 0.5s;
   transform: scale(0);
   animation: grow 0.5s 2s forwards;
+  margin-top: 400px;
 }
 
 .itunes:hover {
@@ -72,12 +78,11 @@
 .spotify {
   height: 135px;
   width: 135px;
-  position: absolute;
-  bottom: 25px;
   left: 900px;
   transition: all 0.5s;
   transform: scale(0);
   animation: grow 0.5s 2.5s forwards;
+  margin-top: 400px;
 }
 
 .spotify:hover {
@@ -89,12 +94,11 @@
 .amazon {
   height: 135px;
   width: 135px;
-  position: absolute;
-  bottom: 25px;
   left: 1200px;
   transition: all 0.5s;
   transform: scale(0);
   animation: grow 0.5s 3s forwards;
+  margin-top: 400px;
 }
 
 .amazon:hover {
