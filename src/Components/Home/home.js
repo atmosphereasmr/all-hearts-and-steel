@@ -2,44 +2,28 @@ import React, { Component } from "react";
 import "./home.css";
 
 export default class Home extends Component {
+
+  spotify() {
+    window.location.assign('https://open.spotify.com/album/2MaVAN6yJtZ2a4k0WS8hix')
+  }
+
   render() {
     return (
       <div>
         <div className="home-container">
           <div className="album-div">
-            <img
-              className="album-pic"
-              src={require("../../Assets/album.jpg")}
-              width="600px"
-              height="600px"
-            />
+          <div className="album" />
           </div>
-          <div className="song-div">
-            <img
-              src={require("../../Assets/fancy.png")}
-              width="450px"
-              height="200px"
-            />
-            <a href="https://open.spotify.com/album/2MaVAN6yJtZ2a4k0WS8hix">
-              <h1 className="song-line">➤ 1. The Somebody Song (3:55)</h1>
-            </a>
-            <a href="https://open.spotify.com/album/2MaVAN6yJtZ2a4k0WS8hix">
-              <h1 className="song-line">➤ 2. Wild Irises (3:26)</h1>
-            </a>
-            <a href="https://open.spotify.com/album/2MaVAN6yJtZ2a4k0WS8hix">
-              <h1 className="song-line">➤ 3. Along Came Jody (4:37)</h1>
-            </a>
-            <a href="https://open.spotify.com/album/2MaVAN6yJtZ2a4k0WS8hix">
-              <h1 className="song-line">➤ 4. Must Have Been (3:24)</h1>
-            </a>
-            <img
-              src={require("../../Assets/fancy-upside.png")}
-              width="450px"
-              height="200px"
-            />
+          <div className="songs-div">
+          <div className="fancy" />
+          <div className="song-text" onClick={() => this.spotify()}>➣  1. The Somebody Song 3:54</div>
+          <div className="song-text" onClick={() => this.spotify()}>➣  2. Wild Irises 3:26</div>
+          <div className="song-text" onClick={() => this.spotify()}>➣  3. Along Came Jody 4:37</div>
+          <div className="song-text" onClick={() => this.spotify()}>➣  4. Must Have Been (Anything But Me) 3:23</div>
+          <div className="fancy-upside" />
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

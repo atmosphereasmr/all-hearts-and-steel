@@ -1,53 +1,106 @@
-@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
 
 .home-container {
-  width: 100vw;
-  height: 1000px;
+  width: 100%;
+  height: 80%;
   border-top: 2px ridge white;
   background-color: black;
-  position: absolute;
-  top: 600px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: absolute;
+  top: 50%;
 }
 
 .album-div {
-  width: 600px;
-  height: 800px;
+  width: 35%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.album-pic {
-  border-radius: 25px;
+.album {
+  width: 100%;
+  height: 80%;
+  background-image: url('../../Assets/album.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.song-div {
-  width: 500px;
-  height: 800px;
+.songs-div {
+  width: 35%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
   flex-flow: column;
+}
+
+.fancy {
+  width: 100%;
+  height: 25%;
+  background-image: url('../../Assets/fancy.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fancy-upside {
+  width: 100%;
+  height: 25%;
+  background-image: url('../../Assets/fancy-upside.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.song-text {
+  font-family: 'Dosis', sans-serif;
   color: white;
-  font-family: 'Quattrocento', serif;
-  margin-left: 25px;
-}
-
-.song-line {
-  transition: all 0.5s;
-}
-
-.song-line:hover {
-  transform: scale(1.1);
+  font-size: 24px;
+  font-style: italic;
   cursor: pointer;
-  transition: all 0.5s;
-  color: pink;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.song-text:hover {
+  color: #DEAC31;
+}
+
+@media all and (max-width: 320px) {
+  .home-container {flex-flow: column; align-items: center;}
+  .album-div {width: 80%;}
+  .songs-div {width: 80%;}
+  .song-text {font-size: 15px;};
+}
+
+@media all and (min-width: 320px) {
+  .home-container {flex-flow: column; align-items: center;}
+  .album-div {width: 80%;}
+  .songs-div {width: 80%;}
+  .song-text {font-size: 15px;};
+}
+
+@media all and (min-width: 320px) {
+  .home-container {flex-flow: column; align-items: center;}
+  .album-div {width: 80%;}
+  .songs-div {width: 80%;}
+  .song-text {font-size: 17px;};
+}
+
+@media screen and (min-width: 425px) {
+  .song-text {font-size: 20px;};
+}
+
+@media screen and (min-width: 768px) {
+  .home-container {flex-flow: row; justify-content: space-around;};
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1440px) {
+  .song-text {font-size: 30px;};
 }
