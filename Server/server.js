@@ -7,6 +7,8 @@ const express = require('express')
 
 const app = express();
 
+app.use( bodyParser.json() );
+
 app.use(express.static(__dirname + '/../build'))
 
 massive(process.env.CONNECTION_STRING).then( db => {
@@ -18,9 +20,6 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
 });
 
 app.use(express.static(__dirname + '/build'))
-
-app.use( bodyParser.json() );
-
 
 app.get('/api/items', controller.getPlanes)
 
