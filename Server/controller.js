@@ -1,8 +1,8 @@
 module.exports = {
     getPlanes: (req, res, next) => {
-      const dbInstance = req.app.get('db');
+      const db = req.app.get('db');
   
-      dbInstance.get_planes()
+      db.get_planes()
         .then(items => res.status(200).send(items))
         .catch(error => console.log('error', error))
     },

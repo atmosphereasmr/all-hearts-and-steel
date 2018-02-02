@@ -6,7 +6,7 @@ export default class Header extends Component {
 
   componentDidMount() {
 
-    axios.get('http://www.allheartsandsteel.com/api/items')
+    axios.get('/api/items')
     .then(response => {
       console.log(response)
     })
