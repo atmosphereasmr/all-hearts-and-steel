@@ -24,7 +24,7 @@ app.use( bodyParser.json() );
 app.use( cors( {origin: 'http://allheartsandsteel.com', credentials: true} ) );
 
 
-app.GET('/api/items', controller.getPlanes)
+app.get('/api/items', controller.getPlanes)
 
 const port = process.env.PORT || 80
 app.listen( port , () => { console.log(`Server listening on port ${port}`); } );
