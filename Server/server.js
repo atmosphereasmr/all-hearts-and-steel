@@ -14,8 +14,6 @@ massive(process.env.CONNECTION_STRING).then( db => {
  app.set('db', db)
 })
 
-app.use(express.static(__dirname + '/build'))
-
 app.use( bodyParser.json() );
 app.use( cors() );
 
@@ -24,7 +22,7 @@ app.get('/api/items', controller.getPlanes)
 
 let path = require('path');
 app.get('*', (req, res)=>{
-res.sendFile(path.join(__dirname,'../build/index/html');
+res.sendFile(path.join(__dirname,'../build/index.html')
 
 });
 
