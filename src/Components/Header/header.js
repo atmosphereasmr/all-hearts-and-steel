@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import './header.css'
+import axios from 'axios'
 
 export default class Header extends Component {
+
+  componentDidMount() {
+    axios.get('http://localhost:80/api/items')
+    .then(response => {
+      console.log(response)
+    })
+  }
 
   itunes() {
     window.location.assign('https://itunes.apple.com/us/album/all-hearts-and-steel-ep/1318723897')
