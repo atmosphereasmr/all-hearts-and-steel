@@ -11,8 +11,8 @@ export default class Header extends Component {
       headers: {
         
         
-        "Access-Control-Allow-Origin":  "http://allheartsandsteel.com"
-        "Access-Control-Allow-Methods": "GET"
+        "Access-Control-Allow-Origin":  "http://allheartsandsteel.com",
+        "Access-Control-Allow-Methods": "GET",
         "Access-Control-Allow-Headers": "Content-Type, Authorization"
       
       
