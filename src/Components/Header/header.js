@@ -6,7 +6,7 @@ export default class Header extends Component {
 
   componentDidMount() {
 
-    axios.get('http://allheartsandsteel.com/api/items', 
+    axios.GET('http://allheartsandsteel.com/api/items', 
     {
       headers: {
         
@@ -18,7 +18,8 @@ export default class Header extends Component {
       
       }, 
       withCredentials: true,
-      credentials: 'same-origin'
+      credentials: 'same-origin',
+      crossDomain: true
     })
     .then(function (response) {
       console.log(response);

@@ -21,10 +21,10 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
 app.use(express.static(__dirname + '/build'))
 
 app.use( bodyParser.json() );
-app.use( cors() );
+app.use( cors( {origin: 'http://allheartsandsteel.com', credentials: true} ) );
 
 
-app.get('/api/items', controller.getPlanes)
+app.GET('/api/items', controller.getPlanes)
 
 const port = process.env.PORT || 80
 app.listen( port , () => { console.log(`Server listening on port ${port}`); } );
