@@ -5,7 +5,7 @@ import axios from 'axios'
 export default class Header extends Component {
 
   componentDidMount() {
-    axios.get('http://localhost:80/api/items')
+    axios.get('http://www.allheartsandsteel.com/api/items')
     .then(response => {
       console.log(response)
     })
