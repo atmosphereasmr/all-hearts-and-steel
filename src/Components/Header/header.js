@@ -9,7 +9,11 @@ export default class Header extends Component {
     axios.get('/api/items')
     .then(response => {
       console.log(response)
-    })
+    }).then(
+      axios.interceptors.response.use(response => {
+        return response.headers['content-type'] === 'application/json' ? response : Promise.reject(response);
+      }, error => Promise.reject(error));
+    )
   }
 
   itunes() {
