@@ -12,7 +12,7 @@ export default class Header extends Component {
     }).then(
       axios.interceptors.response.use(response => {
         return response.headers['content-type'] === 'application/json' ? response : Promise.reject(response);
-      }, error => Promise.reject(error));
+      }, error => Promise.reject(error))
     )
   }
 
