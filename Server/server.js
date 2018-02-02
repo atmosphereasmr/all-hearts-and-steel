@@ -2,7 +2,6 @@ require('dotenv').config();
 
 const express = require('express')
 , bodyParser = require('body-parser')
-, cors = require('cors')
 , massive = require('massive')
 , controller = require('./controller');
 
@@ -21,7 +20,6 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
 app.use(express.static(__dirname + '/build'))
 
 app.use( bodyParser.json() );
-app.use( cors( {origin: 'http://allheartsandsteel.com', credentials: true} ) );
 
 
 app.get('/api/items', controller.getPlanes)

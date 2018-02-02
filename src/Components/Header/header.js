@@ -6,20 +6,10 @@ export default class Header extends Component {
 
   componentDidMount() {
 
-    axios.get('http://allheartsandsteel.com/api/items', 
-    {
-      headers: {
-        "Access-Control-Allow-Origin": "http://allheartsandsteel.com"      
-      }, 
-      withCredentials: true
+    axios.get('http://www.allheartsandsteel.com/api/items')
+    .then(response => {
+      console.log(response)
     })
-    .then(function (response) {
-      console.log(response.data);
-      return response
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
   }
 
   itunes() {
