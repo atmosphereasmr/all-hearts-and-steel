@@ -14,7 +14,7 @@ export default class Header extends Component {
       withCredentials: true
     })
     .then(function (response) {
-      console.log(response);
+      console.log(response.data);
       return response
     })
     .catch(function (error) {
