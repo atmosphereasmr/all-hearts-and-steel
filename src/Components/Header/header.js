@@ -6,7 +6,7 @@ export default class Header extends Component {
 
   componentDidMount() {
 
-    axios.get(`http://allheartsandsteel.com/api/items}`, 
+    axios.get(`http://allheartsandsteel.com/api/items`, 
     { 
       withCredentials: true,
       credentials: 'same-origin'
