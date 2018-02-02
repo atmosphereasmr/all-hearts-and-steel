@@ -18,8 +18,6 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
  app.set('db', dbInstance);
 });
 
-app.use(express.static(__dirname + '/build'))
-
 app.use( bodyParser.json() );
 app.use( cors() );
 
