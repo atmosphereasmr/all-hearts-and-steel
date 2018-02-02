@@ -4,7 +4,7 @@ const express = require('express')
 , bodyParser = require('body-parser')
 , cors = require('cors')
 , massive = require('massive')
-, controller = require('./controller');
+, controller = require('./controller.js');
 
 const app = express();
 
