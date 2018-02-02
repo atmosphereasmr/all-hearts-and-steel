@@ -28,5 +28,5 @@ res.sendFile(path.join(__dirname,'../build/index/html');
 
 });
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 80
 app.listen( port , () => { console.log(`Server listening on port ${port}`); } );
