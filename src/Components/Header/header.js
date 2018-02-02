@@ -9,17 +9,9 @@ export default class Header extends Component {
     axios.get('http://allheartsandsteel.com/api/items', 
     {
       headers: {
-        
-        
-        "Access-Control-Allow-Origin":  "http://allheartsandsteel.com",
-        "Access-Control-Allow-Methods": "GET",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization"
-      
-      
+        "Access-Control-Allow-Origin": "http://allheartsandsteel.com"      
       }, 
-      withCredentials: true,
-      credentials: 'same-origin',
-      crossDomain: true
+      withCredentials: true
     })
     .then(function (response) {
       console.log(response);
